@@ -1,0 +1,27 @@
+H1{
+    font-size: 80px;
+}
+.btn{
+    font-size: 18px;
+    //hacer los lados medio redondos
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.imgHome{
+    max-width: 100%;
+    height: auto;
+}
+.suculenta {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente según el ancho */
+    margin-top: 20px; /* Espaciado superior en dispositivos móviles */
+  }
+  
+  @media (max-width: 767px) {
+    /* Estilos específicos para dispositivos móviles */
+    .suculenta {
+      max-width: 80%; /* Hacer la imagen un poco más pequeña en móvil */
+      margin-top: 10px; /* Ajuste de espaciado superior en dispositivos móviles */
+    }
+  }
+  

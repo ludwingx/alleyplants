@@ -1,0 +1,17 @@
+/* Estilos generales de la barra de navegación */
+.navbar {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 10px; /* Espaciado interno de la barra de navegación */
+
+  }
+  
+  /* Estilos específicos del logo en la barra de navegación */
+  .logo {
+    height: 60px; /* Altura del logo */
+    width: auto; /* Ancho automático para mantener las proporciones */
+  }
+.navContainer{
+    display: flex;
+    justify-content: center;
+
+}
