@@ -6,6 +6,10 @@ H1{
     //hacer los lados medio redondos
     border-radius: 40px;
     margin-top: 20px;
+    &.btn-primary{
+      background-color: #096e09;
+      border-color: #096e09;
+    }
 }
 .imgHome{
     max-width: 100%;
