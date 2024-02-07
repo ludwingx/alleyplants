@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiPruebaService {
-  private apiUrl = 'https://api-nba-v1.p.rapidapi.com/seasons';
+  //apiGratis de plantas:
+  // 
+  private apiUrl = 'https://rickandmortyapi.com/api/character/?page=19';
 
   constructor(private http: HttpClient) {}
 

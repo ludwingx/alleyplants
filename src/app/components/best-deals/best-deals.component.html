@@ -1,0 +1,41 @@
+<div class="section">
+    <div class="container">
+        <h2 class="text-center">Mejores ofertas</h2>
+        <div class="filter-buttons d-flex justify-content-center">
+            <button class="btn btn-primary" [ngClass]="{ 'active': toggleFilter.name}" (click)="toggleFilter('name')">Todos</button>
+            <button class="btn btn-primary"  (click)="toggleFilter('species')">Tipo</button>
+            <button class="btn btn-primary" (click)="toggleFilter('price')">Precio</button>
+            <!-- Agrega más botones según tus necesidades -->
+        </div>
+        <div class="container-fluid">
+            <div class="row"> 
+                @for (Character of datos | customFilter: getActiveFilters() ; track Character.id ; let i = $index  ) {
+                    @if (showCard(i)) {
+                        <div class="col-lg-3 col-md-6 col-sm-12" >
+                            <div class="card cardBestDeals "   [ngClass]="{ 'last-card': isLast(i), 'last-card ': i === 11 }">
+                                <img src="{{Character.image}}" alt="{{Character.name}}" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title title">{{Character.name}}</h5>
+                                    <h6 class="card-subtitle subtitle">{{Character.species}}</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="card-text priceText">{{ Character.id | currency:'BS ':'symbol':'1.2-2' }}</p>
+                                        
+                                        <button class="btn btn-primary">
+                                            <span>Reservar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    } 
+                    
+                }
+            </div>
+        </div>
+        <div class="buttonEnd d-flex justify-content-center">
+            <button class="btn btn-primary">
+                <span>Ver toda la tienda</span>
+            </button>
+        </div>
+    </div>
+</div>

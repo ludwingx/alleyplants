@@ -1,7 +1,45 @@
+
 .bestDealsContainer{
     margin-top: 20px;
 }
 .btn-primary{
     background-color: #096e09 ;
     border: #096e09;
+}
+.cardBestDeals{
+    margin-bottom: 20px;
+    width: 16rem;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    //quiero que tengan espacio entre si los cards
+    &:hover{
+
+    }
+}
+.subtitle{
+    color: #096e09;
+}
+.priceText{
+    margin-top: 15px;
+}
+.iconShoppingCart{
+    width: 20px;
+}
+.filter-buttons{
+    margin: 20px;
+    .btn.active {
+        background-color: green;
+        color: white;
+      }
+      
+      /* Estilo para botones inactivos */
+      .btn:not(.active) {
+        background-color: white;
+        color: green;
+      }
+}
+.last-card{
+    opacity: 0.5; // Ajusta la transparencia según tus preferencias
+    // Agrega otros estilos si es necesario
 }
