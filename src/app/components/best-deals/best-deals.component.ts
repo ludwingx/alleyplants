@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { ApiPruebaService } from '../../services/api-prueba.service';
 import { Character } from '../../interfaces/rickandmorty.interface';
 import { CommonModule, NgClass } from '@angular/common';
@@ -9,7 +9,11 @@ import { CustomFilterPipePipe } from '../../pipes/custom-filter.pipe.pipe'
 @Component({
   selector: 'app-best-deals',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, CustomFilterPipePipe, NgClass],
+  imports: [
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule, CommonModule, CustomFilterPipePipe, NgClass],
   templateUrl: './best-deals.component.html',
   styleUrl: './best-deals.component.scss'
 })
